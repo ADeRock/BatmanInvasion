@@ -7,9 +7,11 @@ public class Main {
         System.out.println("THE ANTIMONITOR IS BEGINNING HIS ATTACK!");
         System.out.println("THE MULTIVERSE IS CRASHING, AND THE AMOUNT OF BATMANS ARE INCREASING!");
 //        System.out.println("Fibonacci Series of " + numBatmans + " numbers:");
-    for (int i = 0; i < numBatmans; i++) {
-        Batman batman = new Batman (i+1, 3, 50);
-        batman.run();
+        for (int i = 0; i < numBatmans; i++) {
+            Batman batman = new Batman(i + 1, 3, 8);
+            Thread thread = new Thread(batman);
+            thread.start();
+            System.out.println("");
         }
     }
 }
